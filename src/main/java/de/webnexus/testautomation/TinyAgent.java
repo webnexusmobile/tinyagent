@@ -1,6 +1,7 @@
 package de.webnexus.testautomation;
 
 import java.io.File;
+import java.nio.file.FileSystem;
 import java.util.logging.Logger;
 
 /**
@@ -64,6 +65,7 @@ public class TinyAgent
                 }
             }
             logger.info("Found '" + CONTROL_FILE + "' in local path. Exiting control process.");
+            controlFile.delete();
         }
     }
 }
